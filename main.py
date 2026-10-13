@@ -1,5 +1,8 @@
 import sys
-from PySide6.QtWidgets import QApplication, QMainWindow, QWidget
+
+from PySide6.QtCore import Qt
+from PySide6.QtGui import QBrush, QColor
+from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QTableWidgetItem
 
 from mainWindow import Ui_MainWindow
 from mainPage import Ui_Form as Menu
@@ -30,6 +33,14 @@ class GamePage(QWidget):
         self.parent_window = parent_win
         self.ui = Game()
         self.ui.setupUi(self)
+
+
+
+        for i in range(0, 8):
+            for j in range(i % 2, 8, 2):
+                item = self.ui.tableWidget.item(i, j)
+                item.setBackground(QBrush(QColor(255, 0, 0)))
+
 
 class MenuPage(QWidget):
     def __init__(self, parent_win):
