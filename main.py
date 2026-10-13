@@ -1,1 +1,47 @@
-свор
+import sys
+from PySide6.QtWidgets import QApplication, QMainWindow, QWidget
+
+from mainWindow import Ui_MainWindow
+from mainPage import Ui_Form as Menu
+from gamePage import Ui_Form as Game
+
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+
+        self.stackedWidget = self.ui.stackedWidget
+        self.menuPage = MenuPage(self)
+        self.gamePage = GamePage(self)
+
+        self.stackedWidget.addWidget(self.gamePage)
+        self.stackedWidget.addWidget(self.menuPage)
+        self.stackedWidget.setCurrentWidget(self.menuPage)
+
+    def show_game(self):
+        self.stackedWidget.setCurrentWidget(self.gamePage)
+
+
+class GamePage(QWidget):
+    def __init__(self, parent_win):
+        super().__init__()
+        self.parent_window = parent_win
+        self.ui = Game()
+        self.ui.setupUi(self)
+
+
+class MenuPage(QWidget):
+    def __init__(self, parent_win):
+        super().__init__()
+        self.parent_window = parent_win
+        self.ui = Menu()
+        self.ui.setupUi(self)
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec())

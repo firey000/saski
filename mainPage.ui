@@ -34,7 +34,7 @@
     </widget>
    </item>
    <item row="1" column="0" alignment="Qt::AlignmentFlag::AlignHCenter">
-    <widget class="QWidget" name="" native="true">
+    <widget class="QWidget" name="widget" native="true">
      <property name="minimumSize">
       <size>
        <width>200</width>
@@ -43,7 +43,7 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="igratBtn">
         <property name="maximumSize">
          <size>
           <width>200</width>
@@ -59,7 +59,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="exitBtn">
         <property name="maximumSize">
          <size>
           <width>200</width>
@@ -75,7 +75,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="settingsBtn">
         <property name="maximumSize">
          <size>
           <width>200</width>
@@ -91,7 +91,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="shutdown">
         <property name="maximumSize">
          <size>
           <width>200</width>
