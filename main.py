@@ -31,7 +31,6 @@ class GamePage(QWidget):
         self.ui = Game()
         self.ui.setupUi(self)
 
-
 class MenuPage(QWidget):
     def __init__(self, parent_win):
         super().__init__()
@@ -39,6 +38,14 @@ class MenuPage(QWidget):
         self.ui = Menu()
         self.ui.setupUi(self)
 
+        self.ui.exitBtn.clicked.connect(self.close_window)
+        self.ui.igratBtn.clicked.connect(self.show_game)
+
+    def close_window(self):
+        self.parent_window.close()
+
+    def show_game(self):
+        self.parent_window.show_game()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

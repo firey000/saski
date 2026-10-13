@@ -41,33 +41,33 @@ class Ui_Form(object):
         self.widget.setMinimumSize(QSize(200, 0))
         self.verticalLayout = QVBoxLayout(self.widget)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.pushButton_2 = QPushButton(self.widget)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setMaximumSize(QSize(200, 40))
-        self.pushButton_2.setStyleSheet(u"background-color: #c0b090;")
+        self.igratBtn = QPushButton(self.widget)
+        self.igratBtn.setObjectName(u"igratBtn")
+        self.igratBtn.setMaximumSize(QSize(200, 40))
+        self.igratBtn.setStyleSheet(u"background-color: #c0b090;")
 
-        self.verticalLayout.addWidget(self.pushButton_2)
+        self.verticalLayout.addWidget(self.igratBtn)
 
-        self.pushButton = QPushButton(self.widget)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setMaximumSize(QSize(200, 40))
-        self.pushButton.setStyleSheet(u"background-color: #c0b090;")
+        self.exitBtn = QPushButton(self.widget)
+        self.exitBtn.setObjectName(u"exitBtn")
+        self.exitBtn.setMaximumSize(QSize(200, 40))
+        self.exitBtn.setStyleSheet(u"background-color: #c0b090;")
 
-        self.verticalLayout.addWidget(self.pushButton)
+        self.verticalLayout.addWidget(self.exitBtn)
 
-        self.pushButton_3 = QPushButton(self.widget)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setMaximumSize(QSize(200, 40))
-        self.pushButton_3.setStyleSheet(u"background-color: #c0b090;")
+        self.settingsBtn = QPushButton(self.widget)
+        self.settingsBtn.setObjectName(u"settingsBtn")
+        self.settingsBtn.setMaximumSize(QSize(200, 40))
+        self.settingsBtn.setStyleSheet(u"background-color: #c0b090;")
 
-        self.verticalLayout.addWidget(self.pushButton_3)
+        self.verticalLayout.addWidget(self.settingsBtn)
 
-        self.pushButton_4 = QPushButton(self.widget)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-        self.pushButton_4.setMaximumSize(QSize(200, 40))
-        self.pushButton_4.setStyleSheet(u"background-color: #c0b090;")
+        self.shutdown = QPushButton(self.widget)
+        self.shutdown.setObjectName(u"shutdown")
+        self.shutdown.setMaximumSize(QSize(200, 40))
+        self.shutdown.setStyleSheet(u"background-color: #c0b090;")
 
-        self.verticalLayout.addWidget(self.pushButton_4)
+        self.verticalLayout.addWidget(self.shutdown)
 
 
         self.gridLayout.addWidget(self.widget, 1, 0, 1, 1, Qt.AlignmentFlag.AlignHCenter)
@@ -85,9 +85,9 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
         self.label.setText(QCoreApplication.translate("Form", u"\u0428\u0430\u0448\u0438\u043a\u0438", None))
-        self.pushButton_2.setText(QCoreApplication.translate("Form", u"\u0418\u0433\u0440\u0430\u0442i", None))
-        self.pushButton.setText(QCoreApplication.translate("Form", u"\u041d\u0435 \u0438\u0433\u0440\u0430\u0442i", None))
-        self.pushButton_3.setText(QCoreApplication.translate("Form", u"\u041d\u0430\u0441\u0442\u0440i\u0439\u043ai", None))
-        self.pushButton_4.setText(QCoreApplication.translate("Form", u"\u0412\u044b\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043a\u043e\u043c\u043f", None))
+        self.igratBtn.setText(QCoreApplication.translate("Form", u"\u0418\u0433\u0440\u0430\u0442i", None))
+        self.exitBtn.setText(QCoreApplication.translate("Form", u"\u041d\u0435 \u0438\u0433\u0440\u0430\u0442i", None))
+        self.settingsBtn.setText(QCoreApplication.translate("Form", u"\u041d\u0430\u0441\u0442\u0440i\u0439\u043ai", None))
+        self.shutdown.setText(QCoreApplication.translate("Form", u"\u0412\u044b\u043a\u043b\u044e\u0447\u0438\u0442\u044c \u043a\u043e\u043c\u043f", None))
     # retranslateUi
 
