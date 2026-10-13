@@ -68,12 +68,7 @@ class Ui_Form(object):
         if (self.tableWidget.rowCount() < 8):
             self.tableWidget.setRowCount(8)
         __qtablewidgetitem = QTableWidgetItem()
-        self.tableWidget.setVerticalHeaderItem(0, __qtablewidgetitem)
-        brush = QBrush(QColor(0, 0, 0, 255))
-        brush.setStyle(Qt.BrushStyle.SolidPattern)
-        __qtablewidgetitem1 = QTableWidgetItem()
-        __qtablewidgetitem1.setBackground(brush)
-        self.tableWidget.setItem(0, 0, __qtablewidgetitem1)
+        self.tableWidget.setVerticalHeaderItem(4, __qtablewidgetitem)
         self.tableWidget.setObjectName(u"tableWidget")
         self.tableWidget.setRowCount(8)
         self.tableWidget.setColumnCount(8)
@@ -88,16 +83,11 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.giveUpBtn.setText(QCoreApplication.translate("Form", u"\u0421\u0434\u0430\u0442\u044c\u0441\u044f", None))
-        self.exitBtn.setText(QCoreApplication.translate("Form", u"\u0412\u044b\u0445\u043e\u0434", None))
-        self.turnLabel.setText(QCoreApplication.translate("Form", u"\u0425\u043e\u0434 \u0441\u0430\u0445\u0430\u0440\u043e\u0447\u043a\u0430", None))
-        self.timeLabel.setText(QCoreApplication.translate("Form", u"\u0412\u0440\u0435\u043c\u044f", None))
-        ___qtablewidgetitem = self.tableWidget.verticalHeaderItem(0)
+        self.pushButton_2.setText(QCoreApplication.translate("Form", u"\u0421\u0434\u0430\u0442\u044c\u0441\u044f", None))
+        self.pushButton.setText(QCoreApplication.translate("Form", u"\u0412\u044b\u0445\u043e\u0434", None))
+        self.label.setText(QCoreApplication.translate("Form", u"\u0425\u043e\u0434 \u0441\u0430\u0445\u0430\u0440\u043e\u0447\u043a\u0430", None))
+        self.label_2.setText(QCoreApplication.translate("Form", u"\u0412\u0440\u0435\u043c\u044f", None))
+        ___qtablewidgetitem = self.tableWidget.verticalHeaderItem(4)
         ___qtablewidgetitem.setText(QCoreApplication.translate("Form", u"8", None))
-
-        __sortingEnabled = self.tableWidget.isSortingEnabled()
-        self.tableWidget.setSortingEnabled(False)
-        self.tableWidget.setSortingEnabled(__sortingEnabled)
-
     # retranslateUi
 
