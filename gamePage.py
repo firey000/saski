@@ -28,36 +28,36 @@ class Ui_Form(object):
         self.gridLayout.setObjectName(u"gridLayout")
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.pushButton_2 = QPushButton(Form)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setMinimumSize(QSize(0, 35))
+        self.giveUpBtn = QPushButton(Form)
+        self.giveUpBtn.setObjectName(u"giveUpBtn")
+        self.giveUpBtn.setMinimumSize(QSize(0, 35))
 
-        self.horizontalLayout_2.addWidget(self.pushButton_2)
+        self.horizontalLayout_2.addWidget(self.giveUpBtn)
 
-        self.pushButton = QPushButton(Form)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setMinimumSize(QSize(150, 35))
+        self.exitBtn = QPushButton(Form)
+        self.exitBtn.setObjectName(u"exitBtn")
+        self.exitBtn.setMinimumSize(QSize(150, 35))
 
-        self.horizontalLayout_2.addWidget(self.pushButton)
+        self.horizontalLayout_2.addWidget(self.exitBtn)
 
 
         self.gridLayout.addLayout(self.horizontalLayout_2, 2, 0, 1, 1)
 
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.label = QLabel(Form)
-        self.label.setObjectName(u"label")
+        self.turnLabel = QLabel(Form)
+        self.turnLabel.setObjectName(u"turnLabel")
         font = QFont()
         font.setPointSize(16)
-        self.label.setFont(font)
+        self.turnLabel.setFont(font)
 
-        self.horizontalLayout.addWidget(self.label, 0, Qt.AlignmentFlag.AlignLeft)
+        self.horizontalLayout.addWidget(self.turnLabel, 0, Qt.AlignmentFlag.AlignLeft)
 
-        self.label_2 = QLabel(Form)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setFont(font)
+        self.timeLabel = QLabel(Form)
+        self.timeLabel.setObjectName(u"timeLabel")
+        self.timeLabel.setFont(font)
 
-        self.horizontalLayout.addWidget(self.label_2, 0, Qt.AlignmentFlag.AlignRight)
+        self.horizontalLayout.addWidget(self.timeLabel, 0, Qt.AlignmentFlag.AlignRight)
 
 
         self.gridLayout.addLayout(self.horizontalLayout, 0, 0, 1, 1)

@@ -80,10 +80,6 @@
      <property name="columnCount">
       <number>8</number>
      </property>
-     <row/>
-     <row/>
-     <row/>
-     <row/>
      <row>
       <property name="text">
        <string>8</string>
@@ -92,6 +88,10 @@
      <row/>
      <row/>
      <row/>
+     <row/>
+     <row/>
+     <row/>
+     <row/>
      <column/>
      <column/>
      <column/>
@@ -100,6 +100,17 @@
      <column/>
      <column/>
      <column/>
+     <item row="0" column="0">
+      <property name="background">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </property>
+     </item>
     </widget>
    </item>
   </layout>

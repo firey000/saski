@@ -1,7 +1,7 @@
 import sys
+from PySide6 import QMainWindow
+from PySide6.QtWidgets import QApplication, QDialog
 
-from PySide6.QtGui import QBrush, Qt
-from PySide6.QtWidgets import QMainWindow, QApplication, QDialog, QTableWidgetItem
 from mainWindow import Ui_MainWindow
 from mainPage import Ui_Form as Menu
 from gamePage import Ui_Form as Game
@@ -22,14 +22,17 @@ class MainWindow(QMainWindow):
         self.stackedWidget.setCurrentWidget(self.menuPage)
 
     def show_game(self):
-        self.stackedWidget.setCurrentWidget(self.gamePage)
+        self.stakedWidget.setCurrentWidget(self.gamePage)
 
-class GamePage(QDialog):
+
+class GamePage(QWidget):
     def __init__(self, parent_win):
-        super().__init__(parent_win)
+        super().__init__()
+        self.parent_window = parent_win
         self.ui = Game()
         self.ui.setupUi(self)
-        self.parent_window = parent_win
+
+        self.ui.exitBtn.clicked.connect(self.parent_window.show_menu)
 
         self.item = QTableWidgetItem()
         self.brush = QBrush()
@@ -40,16 +43,27 @@ class GamePage(QDialog):
                 self.ui.tableWidget.setItem(i, j, self.item)
 
 
+class MenuPage(QWidget):
+    def __init__(self, parent_win):
+        super().__init__()
+        self.parent_window = parent_win
+
+
 class MenuPage(QDialog):
     def __init__(self, parent_win):
         super().__init__(parent_win)
         self.ui = Menu()
         self.ui.setupUi(self)
+
+        self.ui.exitBtn.clicked.connect(self.parent_window.close)
+        self.ui.igratBtn.clicked.connect(self.parent_window.show_game)
+
+class SettingsPage(QWidget):
+    def __init__(self, parent_win):
+        super().__init__()
         self.parent_window = parent_win
-
-
-
-
+        self.ui = Settings()
+        self.ui.setupUi(self)
 
 
 if __name__ == '__main__':
